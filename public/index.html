@@ -7,7 +7,7 @@
   <title>Welcome to Firebase Hosting</title>
 
   <script src="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.2.0/firebaseui.css"/>
 
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/5.3.0/firebase-app.js"></script>
@@ -28,57 +28,99 @@
 </head>
 
 <body>
-  <!--LOGIN-->
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div id="firebaseui-auth-container"></div>
-          <div id="userLogin"></div>
-          <div id="out" style="text-align: left">
-            <h6>Sign Out</h6>
-          </div>
+<!--LOGIN-->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div id="firebaseui-auth-container"></div>
+        <div id="userLogin"></div>
+        <div id="out" style="text-align: left">
+          <h6>Sign Out</h6>
         </div>
       </div>
     </div>
-  </section>
-
-  <!--RECEPCIONISTA-->
-
-  <!-- tabla para recepcionista-->
-
-  <section id="recepcionista">
+  </div>
+</section>
+<!--RECEPCIONISTA-->
+<!-- formulario para datos de tabla-->
+<section>
+  <div id="app" style="padding-top: 8rem;">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4" style="text-align: center">
-          <h4>Visitas iF Blanco</h4>
+          <div class="input-group col-lg-4">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+              </div>
+            </div>
+        <div class="col-lg-4 col-sm-offset-3 form-group">
+          <label>Nombre:</label>
+          <input class="form-control" type="text" id="nombre"></input>
         </div>
-        <div class="col-lg-4" id="item">
-          <table id="tableName" class="table">
-            <thead>
-              <tr>
-                <th scope="col"># Foto</th>
-                <th scope="col"># Nombre</th>
-                <th scope="col"># Correo</th>
-                <th scope="col"># Lugar que visita</th>
-                <th scope="col"># Go to</th>
-                <th scope="col"># Hora ingreso</th>
-              </tr>
-            </thead>
-            <tbody id="tablaContenido">
-              <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="col-lg-4 col-sm-offset-3 form-group">
+          <label>Email:</label>
+          <input class="form-control" type="text" id="email"></input>
+        </div>
+        <div class="col-lg-4 col-sm-offset-3 form-group">
+          <label>rut:</label>
+          <input class="form-control" type="email" v-model="rut"></input>
+        </div>
+        <div class="col-lg-4 col-sm-offset-3 form-group">
+          <label>fecha</label>
+          <input class="form-control" v-model="fecha"></input>
+        </div>
+        <div class="col-lg-4 col-sm-offset-3 text-center">
+          <button onclick="enviar" class="btn btn-success">Enviar</button>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- tabla para recepcionista-->
+
+<section id="recepcionista">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4" style="text-align: center">
+        <h4>Visitas iF Blanco</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4" id="item">
+        <table id="tableName" class="table">
+          <thead>
+            <tr>
+              <th scope="col"># Foto</th>
+              <th scope="col"># Nombre</th>
+              <th scope="col"># Correo</th>
+              <th scope="col"># Lugar que visita</th>
+              <th scope="col"># Go to</th>
+              <th scope="col"># Hora ingreso</th>
+            </tr>
+          </thead>
+          <tbody id="tablaContenido">
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!--ADMINISTRADOR-->
@@ -98,32 +140,32 @@
 </section>
 
   <!-- formulario para envio de correo-->
-
+<section>
   <div id="app" style="padding-top: 8rem;">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4 col-sm-offset-3 form-group">
+        <div class="col-lg-4 col-sm-offset-3 form-group">
           <label>Nombre:</label>
           <input class="form-control" type="text" v-model="from_name"></input>
         </div>
-        <div class="col-sm-4 col-sm-offset-3 form-group">
+        <div class="col-lg-4 col-sm-offset-3 form-group">
           <label>Asunto:</label>
           <input class="form-control" type="text" v-model="subject"></input>
         </div>
-        <div class="col-sm-4 col-sm-offset-3 form-group">
+        <div class="col-lg-4 col-sm-offset-3 form-group">
           <label>Correo:</label>
           <input class="form-control" type="email" v-model="from_email"></input>
         </div>
-        <div class="col-sm-4 col-sm-offset-3 form-group">
+        <div class="col-lg-4 col-sm-offset-3 form-group">
           <label>Mensaje:</label>
           <textarea class="form-control" v-model="message"></textarea>
         </div>
-        <div class="col-sm-4 col-sm-offset-3 text-center">
+        <div class="col-lg-4 col-sm-offset-3 text-center">
           <button @click="enviar" class="btn btn-success">Enviar</button>
         </div>
+      </div>
     </div>
   </div>
-</div>
 </section>
 
   <!--enlace bootstrap-->
