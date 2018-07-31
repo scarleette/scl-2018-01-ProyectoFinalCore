@@ -15,6 +15,7 @@ initApp = function () {
       })
     } else {
       // User is signed out.
+      document.getElementById('userLogin').innerHTML = '';
       var uiConfig = {
         signInSuccessUrl: '/',
         signInOptions: [
