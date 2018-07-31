@@ -2,29 +2,20 @@ initApp = function () {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       // User is signed in.
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var uid = user.uid;
-      var phoneNumber = user.phoneNumber;
-      var providerData = user.providerData;
-      user.getIdToken().then(function (accessToken) {
-        document.getElementById('sign-in-status').textContent = 'Signed in';
-        document.getElementById('sign-in').textContent = 'Sign out';
-        document.getElementById('account-details').textContent = JSON.stringify({
-          displayName: displayName,
-          email: email,
-          emailVerified: emailVerified,
-          phoneNumber: phoneNumber,
-          photoURL: photoURL,
-          uid: uid,
-          accessToken: accessToken,
-          providerData: providerData
-        }, null, ' ');
-      });
+      console.log(user)
+      document.getElementById("userLogin").innerHTML = "Hola " + user.displayName;
+
+      userCreate = firebase.database().ref('users/' + user.uid); +
+      userCreate.set({
+        displayName: user.displayName || user.providerData[0].email,
+        email: user.email || user.providerData[0].email,
+        photoUrl: user.photoURL || '',
+        createdOn: user.metadata.createdAt || new Date(),
+        uid: user.uid
+      })
     } else {
       // User is signed out.
+      document.getElementById('userLogin').innerHTML = '';
       var uiConfig = {
         signInSuccessUrl: '/',
         signInOptions: [
