@@ -3,7 +3,7 @@ const registerCreator = () => {
 
 
   visitsCreate = firebase.database().ref('users/' + user.uid + +'/visits'); +
-  visitsCreate.set({
+  visitsCreate.push({
     rut: rut,
     nameVisit: nameVisit,
     visitPhoto: visitPhoto,
@@ -13,3 +13,17 @@ const registerCreator = () => {
   });
 
 }
+
+const drawRegister = () => {
+  messageContainer.innerHTML = '';
+  visitsCreate = firebase.database().ref('users/' + visitsCreate + +'/visits')
+    .on('child_added', (newVisit) => {
+
+      messageContainer.innerHTML += `
+        <p>Nombre : ${newVisit.val().rut}</p>
+        <p>${newVisit.val().visitPhoto}</p>
+        <p>${newVisit.val().createdOn}</p>
+        <p>${newVisit.val().goTo}</p>`;
+    });
+
+};
