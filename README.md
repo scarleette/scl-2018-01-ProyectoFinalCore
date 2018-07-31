@@ -10,14 +10,14 @@ En este proyecto la empresa de coworking donde opera Laboratoria en tu ciudad ha
 ### Equipo de trabajo 
 
   * Diseñadora UX : Scarett Obreque Antoine.
-      Diseñar la experiencia de la aplicación (flujo, interacción, etc.).
-      Identificar, documentar y priorizar las historias de usuario.
-      Crear el diseño visual de la interfaz.
+      * Diseñar la experiencia de la aplicación (flujo, interacción, etc.).
+      * Identificar, documentar y priorizar las historias de usuario.
+      * Crear el diseño visual de la interfaz.
 
   * Equipo Front-end : Mayra Romero y Carolina Da Silva.
-      Implementar la interfaz de usuario diseñada (HTML/CSS/JS).
-      Deben dividirse las funcionalidades entre las dos desarrolladoras.
-      Todas los desarrollos deben incluir pruebas unitarias.
+      * Implementar la interfaz de usuario diseñada (HTML/CSS/JS).
+      * Deben dividirse las funcionalidades entre las dos desarrolladoras.
+      * Todas los desarrollos deben incluir pruebas unitarias.
 
 ## Entregables obligatorios
 Los criterios mínimos de aceptación para considerar que has completado este proyecto son:
@@ -25,11 +25,12 @@ Los criterios mínimos de aceptación para considerar que has completado este pr
 ### Diseño:
 Entregables de diseño :
   * Entrevistas :
-  [Usuario iF](https://docs.google.com/document/d/1s8i-8k-YUlSw_PofanrxZZd1gxMd-RwXzsGMr7cuosE/edit)
-  [Recepcionista](https://docs.google.com/document/d/17E1K_3Y4Fd2nXqDqcrCoSiYHeOZnVrLC4hyoBJnp0rU/edit)
-  [Administradora](https://docs.google.com/document/d/1ZwrRXcAr8sGPi3x5P64sxWnX-75JkwYtbJ5IyAGt3xg/edit)
+  * [Usuario iF](https://docs.google.com/document/d/1s8i-8k-YUlSw_PofanrxZZd1gxMd-RwXzsGMr7cuosE/edit)
+  * [Recepcionista](https://docs.google.com/document/d/17E1K_3Y4Fd2nXqDqcrCoSiYHeOZnVrLC4hyoBJnp0rU/edit)
+  * [Administradora](https://docs.google.com/document/d/1ZwrRXcAr8sGPi3x5P64sxWnX-75JkwYtbJ5IyAGt3xg/edit)
   * Haber probado de “cliente incógnito” el registro de visitas en WeWork y compararla con tu solución y con la referencia que te brindaron ([Envoy](https://envoy.com/)).
-  * Prototipo clickeable de alta fidelidad [VisitasIF](https://marvelapp.com/9a05fj0/screen/46229305)
+  * Prototipo clickeable de alta fidelidad:
+  * [VisitasIF](https://marvelapp.com/9a05fj0/screen/46229305)
   * Haber hecho y documentado (con fotos, videos, aprendizajes, lista de cambios realizados, etc.) sesiones de testing del prototipo con usuarios.
 
 ### Implementación:
