@@ -45,37 +45,39 @@
   <!-- formulario para datos de tabla-->
   <section id="sectionRecepcionista">
     <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-sm-offset-3 form-group">
-              <label>Foto</label>
-              <input type="file" accept="image/*" capture="camera" id="visitPhoto">
-            </div>
-            <div class="col-lg-4 col-sm-offset-3 form-group">
-              <label>Nombre:</label>
-              <input class="form-control" type="text" id="nombre"></input>
-            </div>
-            <div class="col-lg-4 col-sm-offset-3 form-group">
-              <label>Email:</label>
-              <input class="form-control" type="email" id="email"></input>
-            </div>
-            <div class="col-lg-4 col-sm-offset-3 form-group">
-              <label>rut:</label>
-              <input class="form-control" type="text" id="rut"></input>
-            </div>
-            <div class="col-lg-4 col-sm-offset-3 form-group">
-              <label>Lugar que visita:</label>
-              <input class="form-control" type="text" id="goTo"></input>
-            </div>
-            <div class="col-lg-4 col-sm-offset-3 form-group">
-              <label>fecha</label>
-              <input class="form-control" id="fecha"></input>
-            </div>
-            <div class="col-lg-4 col-sm-offset-3 text-center">
-              <button onclick="registerCreator()" class="btn btn-success">Enviar</button>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-offset-3 form-group">
+            <label>Foto</label>
+            <video id="video"></video>
+            <button id="startbutton">Sonríe!</button>
+            <canvas id="canvas"></canvas>
+          </div>
+          <div class="col-lg-4 col-sm-offset-3 form-group">
+            <label>Residente:</label>
+            <select class="form-control" id="selectResidente"></select>
+          </div>
+          <div class="col-lg-4 col-sm-offset-3 form-group">
+            <label>Nombre:</label>
+            <input class="form-control" type="text" id="nombre"></input>
+          </div>
+          <div class="col-lg-4 col-sm-offset-3 form-group">
+            <label>Email:</label>
+            <input class="form-control" type="email" id="email"></input>
+          </div>
+          <div class="col-lg-4 col-sm-offset-3 form-group">
+            <label>rut:</label>
+            <input class="form-control" type="text" id="rut"></input>
+          </div>
+          <div class="col-lg-4 col-sm-offset-3 form-group">
+            <label>Lugar que visita:</label>
+            <input class="form-control" type="text" id="goTo"></input>
+          </div>
+          <div class="col-lg-4 col-sm-offset-3 text-center">
+            <button onclick="registerCreator()" class="btn btn-success">Enviar</button>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -98,11 +100,10 @@
               <thead>
                 <tr>
                   <th scope="col"># Foto</th>
+                  <th scope="col"># Rut</th>
                   <th scope="col"># Nombre</th>
                   <th scope="col"># Correo</th>
                   <th scope="col"># Lugar que visita</th>
-                  <th scope="col"># Go to</th>
-                  <th scope="col"># Hora ingreso</th>
                 </tr>
               </thead>
               <tbody id="tablaContenido">
@@ -189,6 +190,7 @@
   <script src="assets/js/users.js"></script>
   <script src="assets/js/residente.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/photo.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
 

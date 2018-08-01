@@ -18,6 +18,7 @@ const showRols = (uid) => {
 }
 
 const showRecepsionista = (user) => {
+  loadResidents();
   document.getElementById('sectionRecepcionista').style.display = "block";
 }
 
