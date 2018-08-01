@@ -6,12 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         document.getElementById("userLogin").innerHTML = "Hola " + user.displayName;
-        document.getElementById('sectionRecepcionista').style.display = 'block';
-        showRecepsionista();
+        showRols(user.uid);
       } else {
         hideAll();
-        document.getElementById('sectionAdmin').style.display = 'none';
-        document.getElementById('sectionResident').style.display = 'none';
         document.getElementById("userLogin").innerHTML = ""
         drawLogin();
       }

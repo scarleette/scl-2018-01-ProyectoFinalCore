@@ -18,11 +18,6 @@ const drawLogin = () => {
   ui.start('#firebaseui-auth-container', uiConfig);
 }
 
-window.addEventListener('load', function () {
-  initApp()
-});
-
 out.addEventListener('click', () => {
   firebase.auth().signOut();
-  login.style.display = 'block';
 });

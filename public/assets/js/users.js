@@ -4,29 +4,26 @@ const hideAll = () => {
   document.getElementById('sectionResident').style.display = 'none';
 
 }
-const showRecepsionista = (user) => {
-  firebase.database().ref('/users/' + user.uid).once('value', (snapshot) => {
-    document.getElementById('sectionRecepcionista').style.display = "block";
-    if (snapshot.val().rol === 'conserje') {
-      conserje.showRecepsionista()
-    }
+
+const showRols = (uid) => {
+  firebase.database().ref('/users/' + uid).once('value', (snapshot) => {
+    hideAll();
+    if (snapshot.val().rol === 'conserje') showRecepsionista();
+    
+    if (snapshot.val().rol === 'administrador') showAdmin();
+    
+    if (snapshot.val().rol === 'residente') showResident();
   });
+}
+
+const showRecepsionista = (user) => {
+  document.getElementById('sectionRecepcionista').style.display = "block";
 }
 
 const showAdmin = (user) => {
-  firebase.database().ref('/users/' + user.uid).once('value', (snapshot) => {
-    document.getElementById('sectionAdmin').style.display = "block";
-    if (snapshot.val().rol === 'administrador') {
-      conserje.showAdmin()
-    }
-  });
+  document.getElementById('sectionAdmin').style.display = "block";
 }
 
 const showResident = (user) => {
-  firebase.database().ref('/users/' + user.uid).once('value', (snapshot) => {
-    document.getElementById('sectionResident').style.display = "block";
-    if (snapshot.val().rol === 'residente') {
-      conserje.showResident()
-    }
-  });
+  document.getElementById('sectionResident').style.display = "block";
 }
