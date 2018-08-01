@@ -25,10 +25,10 @@ Los criterios mínimos de aceptación para considerar que has completado este pr
 ### Diseño:
 Entregables de diseño :
   * Entrevistas :
-  [Usuario iF](https://docs.google.com/document/d/1s8i-8k-YUlSw_PofanrxZZd1gxMd-RwXzsGMr7cuosE/edit)
-  [Recepcionista](https://docs.google.com/document/d/17E1K_3Y4Fd2nXqDqcrCoSiYHeOZnVrLC4hyoBJnp0rU/edit)
-  [Administradora](https://docs.google.com/document/d/1ZwrRXcAr8sGPi3x5P64sxWnX-75JkwYtbJ5IyAGt3xg/edit)
-  * Haber probado de “cliente incógnito” el registro de visitas en WeWork y compararla con tu solución y con la referencia que te brindaron ([Envoy](https://envoy.com/)).
+  * [Usuario iF](https://docs.google.com/document/d/1s8i-8k-YUlSw_PofanrxZZd1gxMd-RwXzsGMr7cuosE/edit)
+  * [Recepcionista](https://docs.google.com/document/d/17E1K_3Y4Fd2nXqDqcrCoSiYHeOZnVrLC4hyoBJnp0rU/edit)
+  * [Administradora](https://docs.google.com/document/d/1ZwrRXcAr8sGPi3x5P64sxWnX-75JkwYtbJ5IyAGt3xg/edit)
+  * [cuadro comparativo](https://docs.google.com/document/d/1sC7pY5eEDTD51bT7zUVwg8N6-9_u6YL5eNhBU1MTBcA/edit)
   * Prototipo clickeable de alta fidelidad [VisitasIF](https://marvelapp.com/9a05fj0/screen/46229305)
   * Haber hecho y documentado (con fotos, videos, aprendizajes, lista de cambios realizados, etc.) sesiones de testing del prototipo con usuarios.
 
@@ -42,7 +42,3 @@ Entregables de diseño :
     * El [API de notificaciones de HTML 5](https://developer.mozilla.org/en-US/docs/Web/API/notification)
   * Permitir al usuario administrador visualizar la data de los visitantes, incluyendo la fecha y hora de registro de cada uno
   * Los tests unitarios deben cubrir un mínimo del 70% de statements, functions y lines, y un mínimo del 50% de branches. 
-<<<<<<< HEAD
-
-=======
->>>>>>> acc7a33549a5d7c010e77a47b3abf4803a16dc4a

@@ -1,6 +1,6 @@
 const hideAll = () => {
   document.getElementById("sectionRecepcionista").style.display = "none";
-  document.getElementById('sectionAdmin').style.display = 'none';
+  document.getElementById('perfilAmin').style.display = 'none';
   document.getElementById('sectionResident').style.display = 'none';
 
 }
@@ -21,7 +21,7 @@ const showRecepsionista = (user) => {
 }
 
 const showAdmin = (user) => {
-  document.getElementById('sectionAdmin').style.display = "block";
+  document.getElementById('perfilAmin').style.display = "block";
 }
 
 const showResident = (user) => {
