@@ -1,5 +1,6 @@
 // Se crea función que va a subir el registro a la Database
 const registerCreator = () => {
+  const visitPhoto = document.getElementById('visitPhoto').value;
   const nameVisit = document.getElementById('nombre').value;
   const rut = document.getElementById('email').value;
   const visitPhoto = document.getElementById('foto').value;
